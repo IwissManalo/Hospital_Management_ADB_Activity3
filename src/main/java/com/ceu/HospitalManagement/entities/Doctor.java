@@ -14,19 +14,15 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Doctor {
 
     @Id
     private String id;
 
     private String name;
 
-    private String email;
+    private String yearOfService;
 
-    private String contactNumber;
-
-    @DocumentReference(collection = "users")
-    @JsonIgnore
-    private User emergencyContact;
+    private String specialty;
 
 }
