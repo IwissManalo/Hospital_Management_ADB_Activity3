@@ -22,4 +22,6 @@ public class Prescription {
 
     private String doctor;
 
+    private String createdBy;
+
 }

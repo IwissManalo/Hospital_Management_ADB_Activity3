@@ -1,10 +1,13 @@
 package com.ceu.HospitalManagement.controllers;
 
+import com.ceu.HospitalManagement.entities.Doctor;
 import com.ceu.HospitalManagement.entities.RO.DoctorRO;
 import com.ceu.HospitalManagement.services.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/doctor")
@@ -12,6 +15,11 @@ public class DoctorController {
 
     @Autowired
     private DoctorService doctorService;
+
+    @GetMapping("/speciality/{specialty}")
+    public ResponseEntity<List<Doctor>> getDoctorsBySpecialty(@PathVariable String specialty) {
+        return ResponseEntity.ok(doctorService.getDoctorsBySpecialty(specialty));
+    }
 
     @GetMapping
     public ResponseEntity getAll() {

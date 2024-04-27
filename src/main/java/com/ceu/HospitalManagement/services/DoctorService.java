@@ -15,6 +15,10 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
+    public List<Doctor> getDoctorsBySpecialty(String specialty) {
+        return doctorRepository.findBySpecialty(specialty); // Or your custom method
+    }
+
     public List<Doctor> getAll() {
         return doctorRepository.findAll();
     }

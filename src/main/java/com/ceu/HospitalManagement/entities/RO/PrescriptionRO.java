@@ -19,11 +19,14 @@ public class PrescriptionRO {
 
     private String doctor;
 
+    private String createdBy;
+
     public Prescription toPrescription(Prescription prescription) {
         prescription = new Prescription();
         prescription.setId(id);
         prescription.setName(name);
         prescription.setDoctor(doctor);
+        prescription.setCreatedBy(createdBy);
         return prescription;
     }
 }
