@@ -18,7 +18,7 @@ public class DoctorRO {
 
     private String name;
 
-    private String yearOfService;
+    private int yearOfService;
 
     private String specialty;
 

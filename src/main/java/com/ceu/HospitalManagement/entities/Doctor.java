@@ -9,7 +9,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
-@Document(value = "users")
+@Document(value = "doctors")
 @Data
 @Builder
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class Doctor {
 
     private String name;
 
-    private String yearOfService;
+    private int yearOfService;
 
     private String specialty;
 
