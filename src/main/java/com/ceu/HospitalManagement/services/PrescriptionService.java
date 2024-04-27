@@ -25,7 +25,7 @@ public class PrescriptionService {
 
     public boolean save(PrescriptionRO prescriptionRO) {
         Prescription prescription = Objects.isNull(prescriptionRO.getId()) ? null : getOneById(prescriptionRO.getId());
-        prescriptionRepository.save(prescriptionRO.toPrescription());
+        prescriptionRepository.save(prescriptionRO.toPrescription(prescription));
         return true;
     }
 }

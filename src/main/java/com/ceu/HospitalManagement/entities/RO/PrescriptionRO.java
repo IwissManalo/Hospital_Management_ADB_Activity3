@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
-import java.util.Objects;
 
 @Data
 @Builder
@@ -19,10 +17,10 @@ public class PrescriptionRO {
 
     private String name;
 
-    private Doctor doctor;
+    private String doctor;
 
-    public Prescription toPrescription() {
-        Prescription prescription = new Prescription();
+    public Prescription toPrescription(Prescription prescription) {
+        prescription = new Prescription();
         prescription.setId(id);
         prescription.setName(name);
         prescription.setDoctor(doctor);
